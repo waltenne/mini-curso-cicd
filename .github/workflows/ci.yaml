@@ -30,6 +30,7 @@ jobs:
 
       - name: Build do site
         run: |
+          mkdir build
           marmite build
 
       - name: Configurar Pages
@@ -38,7 +39,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./_site
+          path: ./build/site
 
   deploy:
     environment:

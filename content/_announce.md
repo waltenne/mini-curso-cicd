@@ -1,1 +1,0 @@
-Give us a &star; on [github]
