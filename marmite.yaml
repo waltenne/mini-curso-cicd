@@ -1,0 +1,47 @@
+name: CICD Course
+tagline: ''
+url: ''
+https: null
+footer: <div>Powered by <a href="https://github.com/rochacbruno/marmite">Marmite</a> | <small><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY_NC-SA</a></small></div>
+language: ''
+pagination: 10
+pages_title: Pages
+tags_title: Tags
+tags_content_title: Posts tagged with '$tag'
+archives_title: Archive
+archives_content_title: Posts from '$year'
+streams_title: Streams
+streams_content_title: Posts from '$stream'
+series_title: Series
+series_content_title: Posts from '$series' series
+default_author: ''
+authors_title: Authors
+enable_search: false
+enable_related_content: false
+search_title: ''
+content_path: content
+site_path: ''
+templates_path: templates
+static_path: static
+media_path: media
+card_image: ''
+banner_image: ''
+logo_image: ''
+default_date_format: '%b %e, %Y'
+menu:
+- - Começe Aqui
+  - home.html
+- - Sobre o Autor
+  - authors.html
+extra: null
+authors: {}
+streams: {}
+series: {}
+toc: false
+json_feed: false
+show_next_prev_links: true
+publish_md: false
+source_repository: null
+image_provider: null
+markdown_parser: null
+theme: null

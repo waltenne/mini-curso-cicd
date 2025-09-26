@@ -1,0 +1,51 @@
+name: Deploy site with Marmite to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main   # ou o branch principal do seu repositório
+  workflow_dispatch:
+
+permissions:
+  contents: write   # necessário para publicar no gh-pages
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Instalar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Instalar Marmite
+        run: |
+          pip install marmite
+
+      - name: Build do site
+        run: |
+          marmite build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site   # pasta gerada pelo marmite build
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Deploy para GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
