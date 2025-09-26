@@ -3,9 +3,11 @@ name: Mini Curso CI/CD
 description: Um mini curso sobre CI/CD com GitHub Actions e Marmite
 author: Waltenne Carvalho
 language: pt-BR
-url: ''
+url: 'https://waltenne.github.io/mini-curso-cicd'
+
+# PATHS (como você configurou e funcionou)
 content_path: content
-site_path: ''
+site_path: ''              # ✅ Mantém vazio - funciona!
 templates_path: templates
 static_path: static
 media_path: media
