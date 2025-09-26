@@ -74,7 +74,7 @@ Antes de pensar em ferramentas específicas, é fundamental construir uma **base
 ---
 
 <p align="center">
-  <a href="01.md" style="background:#4CAF50; color:white; padding:12px 20px; border-radius:8px; text-decoration:none; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2);">
+  <a href="01.html" style="background:#4CAF50; color:white; padding:12px 20px; border-radius:8px; text-decoration:none; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2);">
     👉 Começar Agora
   </a>
 </p>

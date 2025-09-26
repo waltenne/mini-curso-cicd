@@ -30,8 +30,7 @@ jobs:
 
       - name: Build do site
         run: |
-          mkdir build
-          marmite build
+          marmite build  # ✅ REMOVIDO: mkdir build (não é necessário)
 
       - name: Configurar Pages
         uses: actions/configure-pages@v4
@@ -39,7 +38,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./build/site
+          path: ./site
 
   deploy:
     environment:
