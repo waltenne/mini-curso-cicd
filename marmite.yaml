@@ -5,8 +5,7 @@ author: Waltenne Carvalho
 language: pt-BR
 url: 'https://waltenne.github.io/mini-curso-cicd'
 
-
-card_image: 'https://opengraph.githubassets.com/1/waltenne/mini-curso-cicd'
+card_image: https://opengraph.githubassets.com/1/waltenne/mini-curso-cicd
 content_path: content
 site_path: ''
 templates_path: templates
