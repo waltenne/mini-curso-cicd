@@ -1,86 +1,41 @@
-name: Build and Deploy Site
+name: GH Pages Deploy
 
 on:
   push:
     branches: [main]
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
-  update-contributors:
-    name: 📊 Update Contributors
+  build:
     runs-on: ubuntu-latest
-    
+
     steps:
-      - name: Checkout código
-        uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          fetch-depth: 0
-
-      - name: Configurar Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
-
-      - name: Gerar contributors.md
-        run: |
-          pip install requests
-          python scripts/generate_contributors.py
-
-      - name: Verificar mudanças
-        id: check-changes
-        run: |
-          git add content/contributors.md
-          git diff --staged --quiet && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
-
-      - name: Commit e push
-        if: steps.check-changes.outputs.changed == 'true'
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git commit -m "🤖 Atualiza lista de contribuidores"
-          git push
-
-  build-site:
-    name: 🏗️ Build Site
-    runs-on: ubuntu-latest
-    needs: update-contributors
-    
-    steps:
-      - name: Checkout código
+      - name: Checkout 🛎
         uses: actions/checkout@v4
 
-      - name: Instalar Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
+      - name: Install marmite 🫙
+        run: cargo install --git https://github.com/rochacbruno/marmite --branch main
 
-      - name: Instalar Marmite
-        run: pip install marmite
+      - name: Build site 🏗️
+        run: marmite . site --debug
 
-      - name: Build do site
-        run: |
-          mkdir -p build
-          marmite build
-
-      - name: Configurar Pages
-        uses: actions/configure-pages@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./build/site
+          path: 'site'
 
-  deploy:
-    name: 🚀 Deploy to GitHub Pages
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    
-    runs-on: ubuntu-latest
-    needs: build-site  # ✅ Aguarda build terminar
-    
-    steps:
-      - name: Deploy para GitHub Pages
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

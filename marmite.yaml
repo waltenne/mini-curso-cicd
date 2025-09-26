@@ -5,9 +5,8 @@ author: Waltenne Carvalho
 language: pt-BR
 url: 'https://waltenne.github.io/mini-curso-cicd'
 
-# PATHS (como você configurou e funcionou)
 content_path: content
-site_path: ''              # ✅ Mantém vazio - funciona!
+site_path: ''
 templates_path: templates
 static_path: static
 media_path: media

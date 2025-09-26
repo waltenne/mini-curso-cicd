@@ -1,14 +1,11 @@
-# Contributors
+# Contribuidores
 
-<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+<div align="center" style="margin: 3rem 0;">
 
-<div style="width: 250px; text-align: center; padding: 20px; border: 1px solid #ddd; border-radius: 8px; background: #f9f9f9;">
-    <h3 style="margin: 0 0 15px 0;">
-        <a href="https://github.com/waltenne" target="_blank" style="text-decoration: none; color: #0366d6;">waltenne</a>
-    </h3>
-    <a href="https://github.com/waltenne" target="_blank">
-        <img src="https://avatars.githubusercontent.com/u/38992117?v=4" style="width: 100px; height: 100px; border-radius: 50%;">
-    </a>
-    <p style="margin: 15px 0 0 0; color: #666;">10 commits</p>
+[![Contribuidores](https://contributors-img.web.app/image?repo=waltenne/mini-curso-cicd&size=8&columns=5)](https://github.com/waltenne/mini-curso-cicd/graphs/contributors)
+
+*Clique para ver todas as contribuições*
+
 </div>
-</div>
+
+> 💡 *Esta lista é atualizada automaticamente pelo GitHub*
