@@ -58,21 +58,6 @@ Antes de pensar em ferramentas específicas, é fundamental construir uma **base
 
 ---
 
-## ✅ Pré-requisitos
-
-- Conhecimentos básicos de **Git**.  
-- Interesse em **automação e boas práticas de desenvolvimento**.  
-
----
-
-## 🔗 Recursos Extras
-
-- [O que é CI/CD? – Atlassian](https://www.atlassian.com/continuous-delivery/ci-vs-cd)  
-- [Documentação oficial do Git](https://git-scm.com/doc)  
-- [DevOps Roadmap](https://roadmap.sh/devops)  
-
----
-
 <p align="center">
   <a href="01.html" style="background:#4CAF50; color:white; padding:12px 20px; border-radius:8px; text-decoration:none; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2);">
     👉 Começar Agora
