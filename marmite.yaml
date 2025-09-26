@@ -7,7 +7,6 @@ language: pt-BR
 
 
 card_image: 'https://opengraph.githubassets.com/1/waltenne/mini-curso-cicd'
-banner_image: 'https://opengraph.githubassets.com/1/waltenne/mini-curso-cicd'
 content_path: content
 site_path: ''
 templates_path: templates
