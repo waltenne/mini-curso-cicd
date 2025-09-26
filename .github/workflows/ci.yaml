@@ -30,7 +30,8 @@ jobs:
 
       - name: Build do site
         run: |
-          marmite build  # ✅ REMOVIDO: mkdir build (não é necessário)
+          mkdir build
+          marmite build
 
       - name: Configurar Pages
         uses: actions/configure-pages@v4
