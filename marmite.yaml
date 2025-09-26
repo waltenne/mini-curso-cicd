@@ -3,7 +3,7 @@ name: Mini Curso CI/CD
 description: Um mini curso sobre CI/CD com GitHub Actions e Marmite
 author: Waltenne Carvalho
 language: pt-BR
-url: 'https://waltenne.github.io/mini-curso-cicd'
+#url: 'https://waltenne.github.io/mini-curso-cicd'
 
 # PATHS (como você configurou e funcionou)
 content_path: content
@@ -12,22 +12,21 @@ templates_path: templates
 static_path: static
 media_path: media
 
-# CONFIGURAÇÕES DE TEMA E NAVEGAÇÃO
 menu:
   - [Começe Aqui, home.html]
   - [Sobre o Autor, authors.html]
+  - [GitHub, https://github.com/waltenne/mini-curso-cicd]
+  - [Contribuidores, contributors.html]
 
 pagination: 10
-default_date_format: '%d/%m/%Y'  # Sugestão: formato brasileiro
-
-# FUNCIONALIDADES (como você já tem - perfeito!)
+default_date_format: '%d/%m/%Y'
 enable_search: true
 enable_related_content: true
 toc: true
 json_feed: true
 show_next_prev_links: true
+publish_md: false
 
-# TÍTULOS CRIATIVOS (mantenha - está ótimo!)
 pages_title: $ ls ~/Pages/
 tags_title: SELECT * FROM posts GROUP BY tag
 tags_content_title: SELECT * FROM posts WHERE tag = '$tag'
@@ -38,5 +37,3 @@ search_title: $ grep -rl "$@" ~/
 # ELEMENTOS VISUAIS
 footer: <div>Powered by <a href="https://github.com/rochacbruno/marmite">Marmite</a> | Mini Curso CI/CD</div>
 
-# CONFIGURAÇÕES AVANÇADAS (padrão)
-publish_md: false
