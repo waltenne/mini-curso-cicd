@@ -3,18 +3,18 @@ name: Deploy site with Marmite to GitHub Pages
 on:
   push:
     branches:
-      - main   # ou o branch principal do seu repositório
+      - main
   workflow_dispatch:
 
 permissions:
-  contents: write   # necessário para publicar no gh-pages
+  contents: write
   pages: write
   id-token: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    
     steps:
       - name: Checkout código
         uses: actions/checkout@v4
@@ -32,19 +32,22 @@ jobs:
         run: |
           marmite build
 
+      - name: Configurar Pages
+        uses: actions/configure-pages@v4
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./_site   # pasta gerada pelo marmite build
+          path: ./_site
 
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
+    
     runs-on: ubuntu-latest
     needs: build
-
+    
     steps:
       - name: Deploy para GitHub Pages
         id: deployment
