@@ -1,1 +1,20 @@
-/* Custom CSS */
+/* --- LAYOUT E MARGENS REDUZIDAS --- */
+.md-content {
+  max-width: 1000px;   /* reduz um pouco a largura máxima */
+  margin: 0 auto;       /* centraliza o conteúdo */
+  padding: 20px 25px;   /* margens laterais menores */
+}
+
+/* Ajuste responsivo */
+@media (max-width: 1200px) {
+  .md-content {
+    max-width: 95%;
+    padding: 15px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .md-content {
+    padding: 10px 15px;
+  }
+}
