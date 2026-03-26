@@ -22,6 +22,9 @@ jobs:
       - name: Checkout 🛎
         uses: actions/checkout@v4
 
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+
       - name: Install marmite 🫙
         run: cargo install --git https://github.com/rochacbruno/marmite --branch main
 

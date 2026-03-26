@@ -8,7 +8,7 @@ Já atuei em projetos que reduziram em até **30% o tempo de deploy**, automatiz
 
 Tenho conhecimentos em **AWS, Docker, Jenkins, GitLab CI, Pytho, Shell Script, Grafana e Zabbix**, unindo prática de monitoramento com foco em performance e estabilidade.  
 
-Também participo ativamente das **comunidades**, organizando e apoiando eventos como o **DevOps Days Goiânia** e iniciativas da **Portera Tech**, sempre buscando compartilhar conhecimento e fortalecer o ecossistema.  
+Também participo ativamente das **comunidades**, organizando e apoiando eventos como o **DevOps Days Goiânia** e iniciativas da **PorteraTech**, sempre buscando compartilhar conhecimento e fortalecer o ecossistema.  
 
 ---
 
